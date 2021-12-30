@@ -1,0 +1,111 @@
+@font-face {
+  font-family: notoSans;
+  src: url(../public/fonts/NotoSans-Regular.ttf);
+}
+
+:root {
+  --green: #23CE6B;
+  --black: #272D2D;
+  --white: #f6f8ff;
+  --purple: #a846a0;
+  --gray: #50514f;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+@keyframes mostrarElemento {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.loginForm {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin: 0px auto;
+  width: 300px;
+  box-shadow: 0px 0px 4px #666;
+  margin-top: 100px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.loginForm h1 {
+  margin-bottom: 50px;
+}
+
+.loginForm p {
+  margin-top: 10px;
+}
+
+.loginForm p * {
+  color: #1a924c;
+  transition: 300ms all;
+}
+
+.loginForm p *:hover {
+  text-decoration: underline;
+}
+
+.labelForm {
+  width: 100%;
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--green);
+  padding-bottom: 5px;
+}
+
+.inputText {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.buttonSubmit {
+  padding: 10px;
+  width: 100%;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  background: var(--green);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 0px 4px #ccc;
+  cursor: pointer;
+  transition: 300ms all;
+}
+
+.buttonSubmit:hover {
+  background: #1a924c;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 16px;
+  margin: 10px;
+  text-align: center;
+}
