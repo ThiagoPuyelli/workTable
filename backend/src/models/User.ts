@@ -24,7 +24,21 @@ const userSchema = new Schema<UserInterface & Document>({
     required: true,
     minlength: 4,
     maxLength: 40
+  },
+  projects: {
+    type: [Schema.Types.ObjectId],
+    ref: 'Project'
+  },
+  modeProjects: {
+    type: [Schema.Types.ObjectId],
+    ref: 'Project'
+  },
+  workProjects: {
+    type: [Schema.Types.ObjectId],
+    ref: 'Project'
   }
+}, {
+  versionKey: false
 })
 
 userSchema.pre('save', async function (next: NextFunction) {

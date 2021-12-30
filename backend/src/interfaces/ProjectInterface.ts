@@ -2,7 +2,8 @@ import { Document } from 'mongoose'
 
 export interface TaskInterface {
   title: string
-  description: string;
+  description?: string;
+  manager: string;
 }
 
 export interface TableInterface {
@@ -14,5 +15,8 @@ export default interface ProjectInterface extends Document {
   title: string;
   background: string;
   tables: TableInterface[];
-  workers: string[];
+  workers: any;
+  owner: any;
+  moderators: any;
+  description?: string;
 }
